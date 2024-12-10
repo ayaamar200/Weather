@@ -26,7 +26,6 @@ body {
   color: var(--text-color);
   font-weight: 300;
   line-height: 1.5;
-  background-color: var(--bg-main);
 }
 
 a {
@@ -237,7 +236,6 @@ nav .nav-link:hover {
 }
 
 .contact-desc .section-title p {
-  color: var(--text-color);
   font-weight: 300;
 }
 
@@ -257,9 +255,9 @@ nav .nav-link:hover {
   width: 100%;
   padding: 15px;
   margin-bottom: 10px;
-  color: white;
+  color: var(--color-white);
   border: 2px solid #393c48;
-  background: transparent;
+  background-color: transparent;
 }
 .contact-form input:hover,
 .contact-form input:focus,
@@ -304,6 +302,3 @@ footer .social-media a:hover {
   color: var(--color-white) !important;
 }
 
-footer p {
-  color: var(--text-color);
-}
