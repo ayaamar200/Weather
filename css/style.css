@@ -1,0 +1,309 @@
+/* ******************************** Global Styles ******************************** */
+
+:root {
+  --bg-main: #1e202b;
+  --main-color: #009ad8;
+  --sec-color: #262936;
+  --color-white: #fff;
+  --text-color: #bfc1c8;
+}
+
+.bg-main {
+  background-color: var(--bg-main);
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.bg-main-color {
+  background-color: var(--main-color);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 300;
+  line-height: 1.5;
+  background-color: var(--bg-main);
+}
+
+a {
+  color: var(--color-white) !important;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+::selection {
+  background-color: #d2d2d2;
+}
+
+.form {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.form input {
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  background: #1e202b;
+  color: var(--color-white);
+  border: none;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 0 35px;
+  color: var(--color-white);
+  background-color: var(--main-color);
+}
+
+/* ************************************** Navbar Style ************************************** */
+
+nav .logo-title p {
+  font-size: 10px;
+  color: var(--text-color);
+}
+
+nav .nav-link {
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+nav .nav-link.active {
+  border: 2px solid var(--main-color);
+  color: var(--main-color) !important;
+  border-radius: 30px;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+nav .nav-link:hover {
+  border-color: var(--main-color);
+  color: var(--main-color) !important;
+}
+
+.navbar-toggler {
+  padding: 15px;
+  border: 2px solid var(--bg-main);
+  border-radius: 30px;
+}
+
+.navbar-toggler span {
+  display: inline-block;
+  color: var(--color-white);
+
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.navbar-toggler:hover {
+  border-color: var(--main-color);
+}
+
+.navbar-toggler:hover span {
+  color: var(--main-color);
+}
+
+/* ************************************** Home Section Style ************************************** */
+
+.home {
+  background-image: url("../imgs/banner.png");
+  background-size: cover;
+  padding-block: 70px;
+  min-height: 350px;
+}
+
+.weather-container {
+  background-color: #323544;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: -150px;
+  margin-bottom: 50px;
+}
+
+.weather-container .weather {
+  width: 33.33%;
+}
+
+.weather-container .weather:nth-child(even) {
+  background-color: var(--sec-color);
+}
+
+.weather-container .weather.today .weather-content {
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.weather-container .weather.today .location {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.weather-container .weather.today .degree .num {
+  font-size: 90px;
+  margin-right: 30px;
+}
+
+.weather-container .weather .weather-header {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-weight: 400;
+}
+.weather-container .weather .weather-icon {
+  height: 50px;
+}
+.weather-container .weather .weather-content {
+  padding: 50px 20px 10px;
+  text-align: center;
+}
+.weather-container .weather .weather-content .weather-icon {
+  margin-bottom: 20px;
+}
+.weather-container .weather .weather-content .degree {
+  font-size: 24px;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.weather-container .weather .weather-content span {
+  font-size: 16px;
+}
+
+/* ************************************** Contact Section Style ************************************** */
+.contact-header {
+  background-color: var(--sec-color);
+  border-radius: 40px;
+  padding: 20px 30px;
+  font-size: 13px;
+}
+
+.contact-header a {
+  color: var(--text-color) !important;
+}
+
+.contact-header a::after {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 7px;
+  background: url(../imgs/arrow-gray.png) no-repeat;
+  margin: 0 10px;
+}
+
+.contact-header a:hover {
+  text-decoration: underline;
+}
+
+.contact-details {
+  background-color: var(--sec-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-details .map {
+  min-height: 250px;
+}
+.contact-details .contact-info {
+  padding: 20px;
+}
+
+.contact-info,
+.contact-info a {
+  color: var(--text-color) !important ;
+}
+
+.contact-desc .section-title p {
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.contact-form div {
+  padding-inline: 5px;
+}
+
+.contact-form .form-btn .btn {
+  float: right;
+  padding: 10px 20px;
+  color: var(--color-white);
+  background-color: var(--main-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: white;
+  border: 2px solid #393c48;
+  background: transparent;
+}
+.contact-form input:hover,
+.contact-form input:focus,
+.contact-form textarea:hover,
+.contact-form textarea:focus {
+  border-color: var(--main-color);
+}
+.contact-form textarea {
+  min-height: 150px;
+}
+
+/* ******************************** Footer Section Styles ******************************** */
+
+footer {
+  background-color: var(--sec-color);
+}
+
+footer .form {
+  margin-bottom: 30px;
+}
+
+footer .form .btn {
+  padding: 0 20px;
+}
+
+footer .social-media a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--bg-main);
+  color: var(--main-color) !important;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 20px;
+}
+
+footer .social-media a:hover {
+  background-color: var(--main-color);
+  color: var(--color-white) !important;
+}
+
+footer p {
+  color: var(--text-color);
+}
