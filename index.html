@@ -28,6 +28,11 @@
   </head>
 
   <body class="bg-main">
+
+    <div class="loading d-none" id="loading">
+      <span class="loader"></span>
+    </div>
+
     <!-- ============================== Navbar Section ==============================  -->
     <header class="site-header">
       <nav class="navbar navbar-expand-lg py-5">
@@ -112,101 +117,7 @@
 
         <div class="weather-table">
           <div class="container">
-            <div class="row g-0 weather-container" id="rowData">
-              <!-- <div class="col-md-4">
-                <div class="card">
-                  <div class="card-body weather-container" id="weather">
-                    <div class="today weather">
-                      <div
-                        class="weather-header d-flex justify-content-between align-items-center p-3"
-                        id="today"
-                      >
-                        <div id="todayName"></div>
-                        <div>
-                          <span id="todayNumber"></span>
-                          <span id="todayMonth"></span>
-                        </div>
-                      </div>
-                      <div class="weather-content" id="current">
-                        <div class="location" id="todayLocation"></div>
-                        <div
-                          class="degree d-flex flex-wrap justify-content-between align-items-center"
-                        >
-                          <div class="num" id="todayTemp"></div>
-
-                          <div class="weather-icon">
-                            <img
-                              id="todayWeatherIcon"
-                              src=""
-                              alt=""
-                              width="90"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          id="todayDesc"
-                          class="custom main-color py-4"
-                        ></div>
-
-                        <div class="d-flex gap-3">
-                          <div
-                            class="d-flex justify-content-center align-items-center gap-1"
-                          >
-                            <img
-                              src="./imgs/icon-umberella@2x.png"
-                              alt="Icon Umbrella"
-                              width="20"
-                            />
-                            <span>20%</span>
-                          </div>
-                          <div
-                            class="d-flex justify-content-center align-items-center gap-1"
-                          >
-                            <img
-                              src="./imgs/icon-wind@2x.png"
-                              alt="Icon Wind"
-                              width="20"
-                            />
-                            <span>18km/h</span>
-                          </div>
-                          <div
-                            class="d-flex justify-content-center align-items-center gap-1"
-                          >
-                            <img
-                              src="./imgs/icon-compass@2x.png"
-                              alt="Icon Compass"
-                              width="20"
-                            />
-                            <span>East</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-body weather">
-                    <div class="weather-header text-center p-3">
-                      <div id="nextDayName"></div>
-                    </div>
-                    <div class="weather-content">
-                      <div class="weather-icon">
-                        <img src="" alt="" width="48" id="nextDayIcon" />
-                      </div>
-                      <div class="degree" id="nextDayMaxTemp"></div>
-                      <span id="nextDayMinTemp"></span>
-                      <div
-                        class="custom main-color py-4"
-                        id="nextDayDesc"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            </div>
+            <div class="row g-0 weather-container" id="rowData"></div>
           </div>
         </div>
       </section>

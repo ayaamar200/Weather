@@ -2,7 +2,7 @@
 
 let searchInput = document.getElementById("search");
 let btnFind = document.getElementById("btnFind");
-
+let loadingScreen = document.getElementById("loading");
 
 // ! ***************************** Global Functions *****************************
 
@@ -17,14 +17,18 @@ async function startApp(cityName = "Cairo") {
 startApp();
 
 async function getWeatherData(cityName) {
-  let response = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=0298ebed4d51410f89f175639240612&q=${cityName}&days=3`
-  );
-
-  if (response.ok) {
+  try {
+    loadingScreen.classList.remove("d-none");
+    let response = await fetch(
+      `https://api.weatherapi.com/v1/forecast.json?key=0298ebed4d51410f89f175639240612&q=${cityName}&days=3`
+    );
     let weatherData = await response.json();
     // console.log(weatherData);
     return weatherData;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loadingScreen.classList.add("d-none");
   }
 }
 
