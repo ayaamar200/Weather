@@ -133,20 +133,12 @@ nav .nav-link:hover {
 
 .weather-container {
   background-color: #323544;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  overflow: hidden;
   border-radius: 10px;
   margin-top: -150px;
   margin-bottom: 50px;
 }
 
-.weather-container .weather {
-  width: 33.33%;
-}
-
-.weather-container .weather:nth-child(even) {
+.weather-container .weather-col:nth-child(even) {
   background-color: var(--sec-color);
 }
 
@@ -156,9 +148,21 @@ nav .nav-link:hover {
   padding-bottom: 30px;
 }
 
-.weather-container .weather.today .location {
-  font-size: 18px;
+.weather-container .weather .weather-header {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
   font-weight: 400;
+}
+
+.weather-container .weather .weather-content {
+  padding: 50px 20px 10px;
+  text-align: center;
+}
+
+.weather-container .weather .weather-content .degree {
+  font-size: 24px;
+  color: var(--color-white);
+  font-weight: 700;
 }
 
 .weather-container .weather.today .degree .num {
@@ -166,29 +170,13 @@ nav .nav-link:hover {
   margin-right: 30px;
 }
 
-.weather-container .weather .weather-header {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  font-weight: 400;
-}
-.weather-container .weather .weather-icon {
-  height: 50px;
-}
-.weather-container .weather .weather-content {
-  padding: 50px 20px 10px;
-  text-align: center;
-}
-.weather-container .weather .weather-content .weather-icon {
-  margin-bottom: 20px;
-}
-.weather-container .weather .weather-content .degree {
-  font-size: 24px;
-  color: var(--color-white);
-  font-weight: 700;
-}
-
 .weather-container .weather .weather-content span {
   font-size: 16px;
+}
+
+.weather-container .weather.today .location {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /* ************************************** Contact Section Style ************************************** */
@@ -301,4 +289,3 @@ footer .social-media a:hover {
   background-color: var(--main-color);
   color: var(--color-white) !important;
 }
-
